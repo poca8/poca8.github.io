@@ -1,1 +1,352 @@
-<p>Hello World!</p>
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pin Hao Chen - Resume</title>
+    <style>
+        :root {
+            --primary-color: #3498db;
+            --secondary-color: #2c3e50;
+            --text-color: #333;
+            --light-text: #777;
+            --bg-color: #fff;
+            --section-bg: #f9f9f9;
+            --border-color: #eaeaea;
+            --highlight: #e74c3c;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        
+        header {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        @media (min-width: 768px) {
+            header {
+                grid-template-columns: 2fr 1fr;
+            }
+        }
+        
+        .header-left h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+        
+        .education {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+            color: var(--light-text);
+        }
+        
+        .education img {
+            margin-right: 10px;
+        }
+        
+        .summary {
+            margin-top: 20px;
+            line-height: 1.8;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            justify-content: center;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-item a {
+            color: var(--primary-color);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .contact-item a:hover {
+            color: var(--highlight);
+        }
+        
+        section {
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        h2 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+            position: relative;
+        }
+        
+        .job-entry {
+            margin-bottom: 40px;
+        }
+        
+        .job-title-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+        }
+        
+        .job-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+        }
+        
+        .job-period {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+        
+        .company-desc {
+            font-style: italic;
+            color: var(--light-text);
+            margin-bottom: 15px;
+        }
+        
+        .tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+            color: var(--light-text);
+        }
+        
+        ul {
+            list-style-position: inside;
+            margin-left: 20px;
+        }
+        
+        li {
+            margin-bottom: 10px;
+        }
+        
+        .nested-list {
+            margin-left: 30px;
+            margin-top: 10px;
+        }
+        
+        .nested-list li {
+            margin-bottom: 8px;
+        }
+        
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        
+        @media (min-width: 768px) {
+            .skills-container {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+        
+        .skill-category h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            color: var(--light-text);
+            font-size: 0.9rem;
+        }
+        
+        .project-link {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        .project-link:hover {
+            color: var(--highlight);
+            text-decoration: underline;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                font-size: 12pt;
+                color: black;
+                background-color: white;
+            }
+            
+            .container {
+                width: 100%;
+                max-width: unset;
+            }
+            
+            a {
+                color: black;
+                text-decoration: none;
+            }
+            
+            section {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <h1>Pin Hao Chen</h1>
+                <div class="education">
+                    <span>🎓 B.BA., Business Administration, National Taiwan University 2006 - 2011</span>
+                </div>
+                <div class="summary">
+                    <p>Full-stack developer with 1.5 years of engineering experience and 9 years in product management. Led core payment system refactoring at EZTABLE, improving stability and reducing costs by $10K+ monthly. Unique perspective to design efficient technical solutions from both business and user angles. Transitioned to engineering in 2023, quickly adapting to modern tech stacks.</p>
+                </div>
+            </div>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span>📧</span>
+                    <a href="mailto:poca828@gmail.com">poca828@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span>📱</span>
+                    <a href="tel:+886956022633">+886-956022633</a>
+                </div>
+                <div class="contact-item">
+                    <span>🔗</span>
+                    <a href="https://poca8.github.io">poca8.github.io</a>
+                </div>
+                <div class="contact-item">
+                    <span>🌐</span>
+                    <a href="https://github.com/poca8">github.com/poca8</a>
+                </div>
+            </div>
+        </header>
+        
+        <section id="experience">
+            <h2>WORK EXPERIENCE</h2>
+            
+            <div class="job-entry">
+                <div class="job-title-container">
+                    <div class="job-title">Software Engineer | EZTABLE | 三二三網路科技股份有限公司, Taipei, Taiwan</div>
+                    <div class="job-period">Dec 2023 - Present</div>
+                </div>
+                <div class="company-desc">EZTABLE is Taiwan's leading restaurant reservation platform with 10M members, processing 100K reservations monthly.</div>
+                <div class="tech-stack">NodeJS | JavaScript | TypeScript | React | MySQL | PostgreSQL | AWS | Jenkins | CI/CD</div>
+                
+                <ul>
+                    <li>Restructured EZCASH points system
+                        <ul class="nested-list">
+                            <li>Migrated and rewrote APIs using modular architecture, ensuring backward compatibility and improved code maintainability</li>
+                            <li>Integrated cross-database data (PostgreSQL) back to main database system (MySQL), eliminating data synchronization risks and saving $6K+ monthly cloud fees</li>
+                            <li>Rewrote points expiration calculation and recovery mechanisms, implementing reliable logic and successfully recovering $2M worth of expired points</li>
+                            <li>Created scheduled tasks for distributing reward points and collecting expired points, with regular service stability monitoring</li>
+                        </ul>
+                    </li>
+                    <li>Optimized restaurant POS backend order synchronization module, designing retrieval and redelivery mechanisms for failed records, reducing synchronization failure rate from 3% to nearly 0%</li>
+                    <li>Completed EZParty frontend development and API integration within two months, helping the product launch quickly</li>
+                    <li>Utilized AWS Route53 and ELB services to audit, close, and redirect defunct service pages</li>
+                    <li>Led Google Ads strategy optimization for 2024 S1, expanding effective restaurant advertising scale and applying business logic to calculate breakeven CTA for each restaurant</li>
+                    <li>Updated GA4 tracking code, improving user behavior tracking accuracy by 20%</li>
+                    <li>Created Looker Studio reports for stakeholders, significantly reducing time spent on data retrieval</li>
+                </ul>
+            </div>
+            
+            <div class="job-entry">
+                <div class="job-title-container">
+                    <div class="job-title">Product Manager | 1001F | 一千零一樓數位, Taipei, Taiwan</div>
+                    <div class="job-period">Apr 2014 - Dec 2023</div>
+                </div>
+                <div class="company-desc">1001F is a dynamic independent web game development studio with 10-15 employees and 6-8 cats.</div>
+                <div class="tech-stack">MySQL | Game Design | Online Game Operation | Data Analysis</div>
+                
+                <ul>
+                    <li>Managed long-term operation of web game <a href="#" class="project-link">Nindou</a> launched in 2009, maintaining 90% retention rate at its 14th anniversary through low-development-cost activity rewards and mission systems</li>
+                    <li>Assisted team in developing and successfully incubating web games <a href="#" class="project-link">Maraland</a>, client game <a href="#" class="project-link">Nindou 4</a>, and mobile game <a href="#" class="project-link">Nindou: Fighting Festival</a></li>
+                    <li>Utilized MySQL to implement data-driven user analytics, guiding product decisions and retention strategies</li>
+                    <li>Designed in-game currency issuance and consumption structure, continuously performing data analysis and adjustments to maintain the currency's economic model effectiveness and value</li>
+                    <li>Designed and adjusted combat modes, character ability values, and strength limitations to ensure game balance while providing sufficient purchasing motivation for new characters, increasing revenue by 50%</li>
+                </ul>
+            </div>
+        </section>
+        
+        <section id="skills">
+            <h2>SKILLS & TOOLS</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Technical</h3>
+                    <ul>
+                        <li>Node.js</li>
+                        <li>Express.js</li>
+                        <li>RESTful API</li>
+                        <li>React.js</li>
+                        <li>JavaScript</li>
+                        <li>TypeScript</li>
+                        <li>HTML/CSS</li>
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                        <li>Sequelize</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Cloud</h3>
+                    <ul>
+                        <li>AWS</li>
+                        <li>Firebase</li>
+                        <li>Algolia</li>
+                        <li>Airflow</li>
+                    </ul>
+                </div>
+                
+                <div class="skill-category">
+                    <h3>Workflow</h3>
+                    <ul>
+                        <li>Github</li>
+                        <li>Jenkins CI/CD</li>
+                        <li>Notion</li>
+                        <li>Scrum</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+        
+        <footer>
+            <p>© 2025 Pin Hao Chen. Last updated: May 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
